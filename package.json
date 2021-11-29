@@ -9,6 +9,7 @@
     "electron:start": "electron ."
   },
   "dependencies": {
+    "tailwindcss": "^2.2.19",
     "vue": "^3.2.16"
   },
   "devDependencies": {
