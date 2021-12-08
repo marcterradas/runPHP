@@ -1,7 +1,3 @@
-<template>
-Result
-</template>
+<template>Result</template>
 
-<script setup lang="ts">
-
-</script>
+<script setup lang="ts"></script>

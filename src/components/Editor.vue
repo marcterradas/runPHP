@@ -1,7 +1,3 @@
-<template>
-Editor
-</template>
+<template>Editor</template>
 
-<script setup lang="ts">
-
-</script>
+<script setup lang="ts"></script>
