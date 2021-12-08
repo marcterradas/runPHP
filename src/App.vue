@@ -1,9 +1,9 @@
 <template>
-    <div id="app">
-    <div class="h-screen">
+    <div class="">
+    <div class="">
         <Editor></Editor>
     </div>
-    <div class="h-screen">
+    <div class="">
         <Result></Result>
     </div>
     </div>
@@ -16,4 +16,7 @@ import Result from './components/Result.vue'
 
 <style lang="scss">
 @import './assets/styles/reset.css';
+body {
+    height: 100%;
+}
 </style>
