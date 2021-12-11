@@ -27,7 +27,11 @@ const editorValue = useStorage<Record<string, any>>('editor-value', initialEdito
 const emit = defineEmits<(e: 'change', payload: typeof editorValue.value) => void>()
 
 onMounted(() => {
-    editor = monaco.editor.create(container.value!, {})
+    editor = monaco.editor.create(container.value!, {
+        minimap: {
+            enabled: false
+        }
+    })
 
     emit('change', editorValue.value)
 })
