@@ -1,9 +1,9 @@
 <template>
     <div class="h-full grid grid-cols-2 gap-0">
-        <div>
+        <div class="pt-3">
             <Editor></Editor>
         </div>
-        <div>
+        <div class="pl-6 pt-3">
             <Result></Result>
         </div>
     </div>
