@@ -1,5 +1,5 @@
 <template>
-    <div class="h-full grid grid-cols-2 gap-0">
+    <div class="h-full grid grid-cols-2 gap-0 bg-vs-dark">
         <div class="pt-3">
             <Editor></Editor>
         </div>

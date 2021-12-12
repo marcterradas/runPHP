@@ -30,7 +30,8 @@ onMounted(() => {
     editor = monaco.editor.create(container.value!, {
         minimap: {
             enabled: false
-        }
+        },
+        theme: 'vs-dark',
     })
 
     emit('change', editorValue.value)
