@@ -31,7 +31,8 @@ onMounted(() => {
         minimap: {
             enabled: false
         },
-        theme: 'vs-dark',
+        fontSize: 16,
+        theme: 'vs-dark'
     })
 
     emit('change', editorValue.value)
