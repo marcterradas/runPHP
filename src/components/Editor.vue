@@ -5,7 +5,7 @@
 <script setup lang="ts">
 import { onMounted, ref, onUnmounted, watch, toRefs } from 'vue'
 import { useResizeObserver, useStorage, useDebounceFn } from '@vueuse/core'
-import { editorDefaultConfiguration } from '../utils/defaultConfigurations'
+import { editorDefaultConfiguration, editorDefaultPosition } from '../utils/defaultConfigurations'
 import * as monaco from 'monaco-editor'
 
 const initialEditorValue = {}
@@ -21,6 +21,7 @@ const emit = defineEmits<(e: 'change', payload: typeof editorValue.value) => voi
 onMounted(() => {
     editor = monaco.editor.create(container.value!, editorDefaultConfiguration())
     editor.focus()
+    editor.setPosition(editorDefaultPosition());
     emit('change', editorValue.value)
 })
 </script>
