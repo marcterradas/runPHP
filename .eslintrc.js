@@ -10,5 +10,8 @@ module.exports = {
         parser: '@typescript-eslint/parser'
     },
     plugins: ['vue', '@typescript-eslint'],
-    rules: {}
+    rules: {
+        '@typescript-eslint/no-inferrable-types': 'off',
+        '@typescript-eslint/no-var-requires': 'off'
+    }
 }
