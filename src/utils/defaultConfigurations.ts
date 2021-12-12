@@ -1,6 +1,6 @@
 export const editorDefaultConfiguration = () => {
     return {
-        value: '<?php\n',
+        value: '',
         minimap: {
             enabled: false
         },
