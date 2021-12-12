@@ -1,6 +1,6 @@
 export const editorDefaultConfiguration = () => {
     return {
-        value: '<?php \n',
+        value: '<?php\n',
         minimap: {
             enabled: false
         },
@@ -11,6 +11,7 @@ export const editorDefaultConfiguration = () => {
 
 export const editorDefaultPosition = () => {
     return {
-        column: 1, lineNumber: 2
+        column: 1,
+        lineNumber: 2
     }
 }
