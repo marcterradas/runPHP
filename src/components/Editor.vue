@@ -5,18 +5,10 @@
 <script setup lang="ts">
 import { onMounted, ref, onUnmounted, watch, toRefs } from 'vue'
 import { useResizeObserver, useStorage, useDebounceFn } from '@vueuse/core'
-
+import { editorDefaultConfiguration } from '../utils/defaultConfigurations'
 import * as monaco from 'monaco-editor'
-import editorWorker from 'monaco-editor/esm/vs/editor/editor.worker?worker'
-
-self.MonacoEnvironment = {
-    getWorker(_: string, label: string) {
-        return new editorWorker()
-    }
-}
 
 const initialEditorValue = {}
-
 const container = ref<HTMLDivElement | null>(null)
 
 let editor: monaco.editor.IStandaloneCodeEditor
@@ -27,14 +19,7 @@ const editorValue = useStorage<Record<string, any>>('editor-value', initialEdito
 const emit = defineEmits<(e: 'change', payload: typeof editorValue.value) => void>()
 
 onMounted(() => {
-    editor = monaco.editor.create(container.value!, {
-        minimap: {
-            enabled: false
-        },
-        fontSize: 16,
-        theme: 'vs-dark'
-    })
-
+    editor = monaco.editor.create(container.value!, editorDefaultConfiguration())
     emit('change', editorValue.value)
 })
 </script>
