@@ -20,6 +20,7 @@ const emit = defineEmits<(e: 'change', payload: typeof editorValue.value) => voi
 
 onMounted(() => {
     editor = monaco.editor.create(container.value!, editorDefaultConfiguration())
+    editor.focus()
     emit('change', editorValue.value)
 })
 </script>
