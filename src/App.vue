@@ -13,7 +13,7 @@
 import Editor from './components/Editor.vue'
 import Result from './components/Result.vue'
 
-const onChange = (payload: String) => {
-    console.log(payload)
+const onChange = (code: string) => {
+    console.log(code)
 }
 </script>

@@ -9,7 +9,7 @@ import { editorDefaultConfiguration, editorDefaultPosition } from '../utils/defa
 import * as monaco from 'monaco-editor'
 
 const container = ref<HTMLDivElement | null>(null)
-const emit = defineEmits<(e: 'change', payload: String) => void>()
+const emit = defineEmits<(e: 'change', payload: string) => void>()
 
 onMounted(() => {
     const editor = monaco.editor.create(container.value!, editorDefaultConfiguration())
