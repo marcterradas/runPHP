@@ -11,6 +11,7 @@ function createWindow() {
     })
 
     win.loadFile('dist/index.html')
+    win.openDevTools()
 }
 
 app.whenReady().then(() => {
