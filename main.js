@@ -1,7 +1,7 @@
 const { app, BrowserWindow } = require('electron')
 const path = require('path')
-
-
+const { promisify } = require('util')
+const exec = promisify(require('child_process').exec)
 
 function createWindow() {
     const win = new BrowserWindow({
@@ -19,3 +19,17 @@ function createWindow() {
 app.whenReady().then(() => {
     createWindow()
 })
+
+/**
+ * Execute php code  in the terminal
+ * @param { string } code
+ */
+async function executePHPCode(code = '') {
+    const query = `php -r "${code}"`
+    try {
+        const { stdout, stderr } = await exec(query)
+        console.log(stdout)
+    } catch (error) {
+        console.error(error)
+    }
+}
