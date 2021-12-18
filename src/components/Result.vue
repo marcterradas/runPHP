@@ -1,5 +1,4 @@
 <template>
-    <div id="result" class="text-vs-white text-base"></div>
+    <div id="result" class="text-base text-vs-white"></div>
+    <div id="error" class="text-base text-red-500"></div>
 </template>
-
-<script setup lang="ts"></script>
