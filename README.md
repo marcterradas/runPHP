@@ -1,15 +1,11 @@
 # runPHP
 
 <p align="center">
-<img src="./assets/php.png"
-  alt="logo"
-  width="128" height="128">
+    <img src="./assets/php.png" alt="logo" width="128" height="128">
 </p>
 
 <p align="center">
-<img src="./assets/video.gif"
-  alt="logo"
-  width="512" height="512">
+    <img src="./assets/video.gif" alt="logo">
 </p>
 
 runPHP is a PHP playground inspired by RunJS
