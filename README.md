@@ -1,10 +1,6 @@
 # runPHP
 
 <p align="center">
-    <img src="./assets/php.png" alt="logo" width="128" height="128">
-</p>
-
-<p align="center">
     <img src="./assets/video.gif" alt="logo">
 </p>
 
