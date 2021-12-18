@@ -3,7 +3,7 @@
 runPHP is a PHP playground inspired by RunJS
 
 <p align="center">
-    <img src="./assets/video.mkv" alt="logo">
+    <img src="./assets/video.gif" alt="logo">
 </p>
 
 ## Project setup
