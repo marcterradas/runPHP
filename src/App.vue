@@ -14,6 +14,6 @@ import Editor from './components/Editor.vue'
 import Result from './components/Result.vue'
 
 const onChange = (code: string) => {
-    localStorage.setItem('code', code)
+    localStorage.setItem('code', code.trim())
 }
 </script>
