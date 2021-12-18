@@ -1,6 +1,5 @@
 const { promisify } = require('util')
 const exec = promisify(require('child_process').exec)
-const { editorDefaultConfiguration, editorDefaultPosition } = require('./utils/monacoDefaultConfiguration')
 
 window.addEventListener('DOMContentLoaded', () => {
     const replaceText = (selector, text) => {
@@ -12,12 +11,11 @@ window.addEventListener('DOMContentLoaded', () => {
         replaceText(`${type}-version`, process.versions[type])
     }
 
-    initEditor()
+    setInterval(async () => {
+        const code = localStorage.getItem('code')
+        console.log(code)
+    }, 1000)
 })
-
-const initEditor = () => {
-    console.log('init monaco ...')
-}
 
 const executePHPCode = async (code = '') => {
     const query = `php -r "${code}"`
@@ -27,8 +25,4 @@ const executePHPCode = async (code = '') => {
     } catch (error) {
         console.error(error)
     }
-}
-
-const updateResult = () => {
-    console.log('update result ...')
 }
