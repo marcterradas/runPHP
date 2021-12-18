@@ -12,6 +12,7 @@ function createWindow() {
 
     win.loadFile('dist/index.html')
     // win.openDevTools()
+    win.removeMenu()
 }
 
 app.whenReady().then(() => {
