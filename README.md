@@ -1,5 +1,11 @@
 # runPHP
 
+<p align="center">
+<img src="./assets/php.png"
+  alt="Size Limit comment in pull request about bundle size changes"
+  width="512" height="512">
+</p>
+
 runPHP is a PHP playground inspired by RunJS
 
 ## Project setup
