@@ -12,15 +12,16 @@ window.addEventListener('DOMContentLoaded', () => {
     }
 
     const result = document.getElementById('result')
+    const error = document.getElementById('error')
+    const intervalTime = 1000
 
     setInterval(() => {
         const code = localStorage.getItem('code')
         const executedCode = localStorage.getItem('executedCode')
 
         if (code == '' && code != executedCode) {
-            result.classList.remove('text-red-500')
-            result.classList.remove('text-vs-white')
             result.innerHTML = ''
+            error.innerHTML = ''
             localStorage.setItem('executedCode', '')
         }
 
@@ -28,18 +29,16 @@ window.addEventListener('DOMContentLoaded', () => {
             const command = spawn('php', ['-r', code])
 
             command.stdout.on('data', (data) => {
-                result.classList.remove('text-red-500')
-                result.classList.add('text-vs-white')
+                error.innerHTML = ''
                 result.innerHTML = data
             })
 
             command.stderr.on('data', (data) => {
-                result.classList.remove('text-vs-white')
-                result.classList.add('text-red-500')
-                result.innerHTML = data
+                result.innerHTML = ''
+                error.innerHTML = data
             })
 
             localStorage.setItem('executedCode', code)
         }
-    }, 1000)
+    }, intervalTime)
 })
