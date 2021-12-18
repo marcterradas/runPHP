@@ -13,7 +13,13 @@ window.addEventListener('DOMContentLoaded', () => {
 
     setInterval(async () => {
         const code = localStorage.getItem('code')
-        console.log(code)
+        const executedCode = localStorage.getItem('executedCode')
+
+        if (code != '' && code != executedCode) {
+            const output = await executePHPCode(code)
+            updateResult(output)
+            localStorage.setItem('executedCode', code)
+        }
     }, 1000)
 })
 
@@ -21,8 +27,13 @@ const executePHPCode = async (code = '') => {
     const query = `php -r "${code}"`
     try {
         const { stdout, stderr } = await exec(query)
-        console.log(stdout)
+        return { status: true, result: stdout }
     } catch (error) {
-        console.error(error)
+        return { status: false, result: error }
     }
+}
+
+const updateResult = (output) => {
+    const result = document.getElementById('result')
+    console.log(output)
 }
