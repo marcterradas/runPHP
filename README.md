@@ -29,3 +29,9 @@ npm run build
 ```
 npm run start
 ```
+
+## build electron
+
+```
+npx electron-packager ./runPHP dist --all
+```
