@@ -7,7 +7,8 @@ function createWindow() {
         height: 1080,
         webPreferences: {
             preload: path.join(__dirname, 'preload.js')
-        }
+        },
+        icon: path.join(__dirname, '/assets/php.png')
     })
 
     win.loadFile('dist/index.html')
