@@ -1,7 +1,6 @@
 const { app, BrowserWindow } = require('electron')
 const path = require('path')
 
-
 function createWindow() {
     const win = new BrowserWindow({
         width: 1920,
@@ -12,7 +11,7 @@ function createWindow() {
     })
 
     win.loadFile('dist/index.html')
-    win.openDevTools()
+    // win.openDevTools()
 }
 
 app.whenReady().then(() => {
