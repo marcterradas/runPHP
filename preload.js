@@ -1,5 +1,5 @@
 const { promisify } = require('util')
-const exec = promisify(require('child_process').exec)
+const { spawn } = require('child_process')
 
 window.addEventListener('DOMContentLoaded', () => {
     const replaceText = (selector, text) => {
@@ -11,29 +11,35 @@ window.addEventListener('DOMContentLoaded', () => {
         replaceText(`${type}-version`, process.versions[type])
     }
 
-    setInterval(async () => {
+    const result = document.getElementById('result')
+
+    setInterval(() => {
         const code = localStorage.getItem('code')
         const executedCode = localStorage.getItem('executedCode')
 
+        if (code == '' && code != executedCode) {
+            result.classList.remove('text-red-500')
+            result.classList.remove('text-vs-white')
+            result.innerHTML = ''
+            localStorage.setItem('executedCode', '')
+        }
+
         if (code != '' && code != executedCode) {
-            const output = await executePHPCode(code)
-            updateResult(output)
+            const command = spawn('php', ['-r', code])
+
+            command.stdout.on('data', (data) => {
+                result.classList.remove('text-red-500')
+                result.classList.add('text-vs-white')
+                result.innerHTML = data
+            })
+
+            command.stderr.on('data', (data) => {
+                result.classList.remove('text-vs-white')
+                result.classList.add('text-red-500')
+                result.innerHTML = data
+            })
+
             localStorage.setItem('executedCode', code)
         }
     }, 1000)
 })
-
-const executePHPCode = async (code = '') => {
-    const query = `php -r "${code}"`
-    try {
-        const { stdout, stderr } = await exec(query)
-        return { status: true, result: stdout }
-    } catch (error) {
-        return { status: false, result: error }
-    }
-}
-
-const updateResult = (output) => {
-    const result = document.getElementById('result')
-    console.log(output)
-}
