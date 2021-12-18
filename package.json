@@ -5,7 +5,7 @@
     "scripts": {
         "dev": "vite",
         "build": "vue-tsc --noEmit && vite build",
-        "start": "electron .",
+        "start": "electron ."
     },
     "dependencies": {
         "@vueuse/core": "^7.3.0",
