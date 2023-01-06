@@ -33,7 +33,7 @@
         "icons/icon.icns",
         "icons/icon.ico"
       ],
-      "identifier": "com.tauri.dev",
+      "identifier": "terradasmarc.runphp",
       "longDescription": "",
       "macOS": {
         "entitlements": null,
