@@ -1,12 +1,10 @@
 import { defineStore } from 'pinia'
+import { ref } from 'vue'
 
-export const useEditorStore = defineStore('editor', {
-    state: () => ({
-        value: '',
-    }),
-    actions: {
-        edit(newValue: string) {
-            this.value = newValue
-        },
-    },
+export const useResultStore = defineStore('editor', () => {
+    const editor = ref('')
+    function edit(newValue: string) {
+        editor.value = newValue
+    }
+    return { editor, edit }
 })
