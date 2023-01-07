@@ -4,6 +4,8 @@ import Result from '@/components/Result.vue'
 </script>
 
 <template>
-    <Editor />
-    <Result />
+    <div class="h-full grid grid-cols-2 gap-0 bg-vs-dark p-2">
+        <Editor />
+        <Result />
+    </div>
 </template>
