@@ -1,3 +1,5 @@
 <script setup lang="ts"></script>
 
-<template>Editor</template>
+<template>
+    <div class="text-vs-white">Editor ...</div>
+</template>
