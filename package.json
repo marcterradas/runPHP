@@ -1,38 +1,40 @@
 {
-  "name": "run-php",
-  "private": true,
-  "version": "2.0.0",
-  "type": "module",
-  "scripts": {
-    "dev": "vite",
-    "build": "vue-tsc --noEmit && vite build",
-    "preview": "vite preview",
-    "tauri": "tauri",
-    "tauri:dev": "tauri dev",
-    "tauri:build": "tauri build"
-  },
-  "dependencies": {
-    "@tauri-apps/api": "1.2.0",
-    "vue": "3.2.45"
-  },
-  "devDependencies": {
-    "@tauri-apps/cli": "1.2.2",
-    "@types/node": "18.7.10",
-    "@typescript-eslint/eslint-plugin": "5.48.0",
-    "@vitejs/plugin-vue": "4.0.0",
-    "autoprefixer": "10.4.13",
-    "eslint": "8.31.0",
-    "eslint-config-prettier": "8.6.0",
-    "eslint-config-standard-with-typescript": "26.0.0",
-    "eslint-plugin-import": "2.26.0",
-    "eslint-plugin-n": "15.6.0",
-    "eslint-plugin-promise": "6.1.1",
-    "eslint-plugin-vue": "9.8.0",
-    "postcss": "8.4.21",
-    "prettier": "2.8.1",
-    "tailwindcss": "3.2.4",
-    "typescript": "4.9.4",
-    "vite": "4.0.0",
-    "vue-tsc": "1.0.11"
-  }
+    "name": "run-php",
+    "private": true,
+    "version": "2.0.0",
+    "type": "module",
+    "scripts": {
+        "dev": "vite",
+        "build": "vue-tsc --noEmit && vite build",
+        "preview": "vite preview",
+        "tauri": "tauri",
+        "tauri:dev": "tauri dev",
+        "tauri:build": "tauri build",
+        "test": "vitest"
+    },
+    "dependencies": {
+        "@tauri-apps/api": "1.2.0",
+        "vue": "3.2.45"
+    },
+    "devDependencies": {
+        "@tauri-apps/cli": "1.2.2",
+        "@types/node": "18.7.10",
+        "@typescript-eslint/eslint-plugin": "5.48.0",
+        "@vitejs/plugin-vue": "4.0.0",
+        "autoprefixer": "10.4.13",
+        "eslint": "8.31.0",
+        "eslint-config-prettier": "8.6.0",
+        "eslint-config-standard-with-typescript": "26.0.0",
+        "eslint-plugin-import": "2.26.0",
+        "eslint-plugin-n": "15.6.0",
+        "eslint-plugin-promise": "6.1.1",
+        "eslint-plugin-vue": "9.8.0",
+        "postcss": "8.4.21",
+        "prettier": "2.8.1",
+        "tailwindcss": "3.2.4",
+        "typescript": "4.9.4",
+        "vite": "4.0.0",
+        "vitest": "0.26.3",
+        "vue-tsc": "1.0.11"
+    }
 }
