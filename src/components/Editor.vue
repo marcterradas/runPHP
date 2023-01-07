@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { onMounted, ref } from 'vue'
 import { configuration, position } from '../editor-configuration'
-
 import * as monaco from 'monaco-editor'
+
 const container = ref<HTMLDivElement | null>(null)
 // const emit = defineEmits<(e: 'change', payload: string) => void>()
 const setUpEditor = (): void => {
