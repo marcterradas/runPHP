@@ -3,8 +3,8 @@ import { ref } from 'vue'
 
 export const useEditorStore = defineStore('editor', () => {
     const editor = ref('')
-    function editEditor(newValue: string) {
+    function updateEditorValue(newValue: string) {
         editor.value = newValue
     }
-    return { editor, editEditor }
+    return { editor, updateEditorValue }
 })
