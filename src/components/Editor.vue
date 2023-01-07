@@ -12,9 +12,7 @@ const setUpEditor = (): void => {
     const editor = monaco.editor.create(container.value!, configuration())
     editor.focus()
     editor.setPosition(position())
-    editor.onDidChangeModelContent(() => {
-        updateEditorValue(editor.getValue())
-    })
+    editor.onDidChangeModelContent(() => updateEditorValue(editor.getValue()))
 }
 onMounted(setUpEditor)
 </script>
