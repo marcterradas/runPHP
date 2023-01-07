@@ -4,12 +4,11 @@ import { useResultStore } from '@/store/result'
 
 const handleClick = (): void => {
     const editorStore = useEditorStore()
-    const resultStore = useResultStore()
+    // const resultStore = useResultStore()
+    const { editor } = editorStore
+    // const { result, editResult } = resultStore
 
-    const { editor, editEditor } = editorStore
-    const { result, editResult } = resultStore
-
-    console.log(editor, result)
+    console.log(editor)
     // 1. get user input
     // 2. execute code in php
     // 3. show code to input
