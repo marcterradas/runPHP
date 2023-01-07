@@ -1,3 +1,5 @@
 <script setup lang="ts"></script>
 
-<template>Result ...</template>
+<template>
+    <div class="text-vs-white">Result ...</div>
+</template>
