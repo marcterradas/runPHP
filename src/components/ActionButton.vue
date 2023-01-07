@@ -1,17 +1,13 @@
 <script setup lang="ts">
 import { useEditorStore } from '@/store/editor'
 import { useResultStore } from '@/store/result'
+import { executePHPCode } from '@/logic/bash'
 
-const handleClick = (): void => {
-    const editorStore = useEditorStore()
-    // const resultStore = useResultStore()
-    const { editor } = editorStore
-    // const { result, editResult } = resultStore
-
-    console.log(editor)
-    // 1. get user input
-    // 2. execute code in php
-    // 3. show code to input
+const handleClick = async (): void => {
+    const { editor } = useEditorStore()
+    const { editResult } = useResultStore()
+    const result = await executePHPCode(editor)
+    editResult(result)
 }
 </script>
 
