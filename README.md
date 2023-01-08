@@ -1,37 +1,27 @@
 # runPHP
 
-runPHP is a PHP playground inspired by RunJS
+<h1 align='center'>runPHP is a PHP playground</h1>
 
-<p align="center">
-    <img src="./assets/video.gif" alt="logo">
-</p>
+## Technologies
 
-## Project setup
+- 📦 Tauri
+- 📦 Vue.js
+- 📦 Vite
+
+### Project setup
 
 ```
 npm i
 ```
 
-## start vue
+### Compiles and hot-reloads for development
 
 ```
-npm run dev
+npm run tauri:dev
 ```
 
 ### Compiles and minifies for production
 
 ```
-npm run build
-```
-
-## start electron
-
-```
-npm run start
-```
-
-## build electron
-
-```
-npx electron-packager ./runPHP dist --all
+npm run tauri:build
 ```
