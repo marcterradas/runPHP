@@ -17,7 +17,6 @@ fn execute_php(input: &str) -> String {
     let s: String = String::from(str::from_utf8(&hello).unwrap());
 
     return s;
-    
 }
 
 fn main() {
