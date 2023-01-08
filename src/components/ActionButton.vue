@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import { useEditorStore } from '@/store/editor'
-import { useResultStore } from '@/store/result'
-import { executePHPCode } from '@/logic/bash'
+import { useEditorStore } from '../store/editor'
+import { useResultStore } from '../store/result'
+import { executePHPCode } from '../logic/bash'
 
-const handleClick = async (): void => {
+const handleClick = async (): Promise<void> => {
     const { editor } = useEditorStore()
     const { editResult } = useResultStore()
     const result = await executePHPCode(editor)

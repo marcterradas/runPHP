@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { storeToRefs } from 'pinia'
-import ActionButton from '@/components/ActionButton.vue'
-import { useResultStore } from '@/store/result'
+import ActionButton from './ActionButton.vue'
+import { useResultStore } from '../store/result'
 
 const { result } = storeToRefs(useResultStore())
 </script>

@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { onMounted, ref } from 'vue'
 import * as monaco from 'monaco-editor'
-import { configuration, position } from '@/editor-configuration'
-import { useEditorStore } from '@/store/editor'
+import { configuration, position } from '../editor-configuration'
+import { useEditorStore } from '../store/editor'
 
 const container = ref<HTMLDivElement | null>(null)
 const editorStore = useEditorStore()
